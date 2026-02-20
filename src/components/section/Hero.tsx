@@ -1,7 +1,14 @@
 import Image from "next/image";
 import HeroBranding from "../layout/HeroBranding";
+import FeatureItem from "../layout/FeatureItem";
 
 export default function Hero() {
+  const features = [
+    "English & Sinhala Medium",
+    "Online & Physical Classes",
+    "Practical Coding",
+    "Full Syllabus Coverage",
+  ];
   return (
     <div className="relative flex flex-col lg:flex-row items-center md:items-start justify-between gap-12 px-6 lg:px-5">
       <div className="flex-1 lg:max-w-[50%] mt-12">
@@ -12,6 +19,11 @@ export default function Hero() {
             "Join the most structured ICT program in Sri Lanka. We simplify complex concepts for A/L & O/L using practical coding."
           }
         />
+        <div className="flex flex-col gap-2 mt-12">
+          {features.map((text, index) => (
+            <FeatureItem key={index} text={text} />
+          ))}
+        </div>
       </div>
 
       <div className="relative flex-1 w-full max-w-[400px] lg:max-w-[707px]">

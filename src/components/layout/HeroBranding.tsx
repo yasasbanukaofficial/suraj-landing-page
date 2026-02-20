@@ -25,8 +25,8 @@ export default function HeroBranding({
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4 pt-4">
-        <Button text="Explore Classes" isDarkMode={true} />
-        <Button text="Course Outline" />
+        <Button text="Start Learning" isDarkMode={true} />
+        <Button text="View Classes" />
       </div>
     </div>
   );
