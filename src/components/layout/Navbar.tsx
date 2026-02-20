@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Navbar() {
   const navItems = ["About", "Classes", "Contact"];
   return (
-    <nav className="fixed top-0 w-full z-50 flex items-center align-middle justify-between px-6 md:px-12 py-6 bg-white/80 backdrop-blur-md">
+    <nav className="fixed top-0 w-full z-50 flex items-center align-middle justify-between px-6 md:px-20 py-6 bg-white/80 backdrop-blur-md">
       <Link href={"/"} className="flex items-center gap-2">
         <Image
           src={"/assets/logo.png"}
