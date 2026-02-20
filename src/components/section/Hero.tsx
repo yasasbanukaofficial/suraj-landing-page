@@ -10,8 +10,8 @@ export default function Hero() {
     "Full Syllabus Coverage",
   ];
   return (
-    <div className="relative flex flex-col lg:flex-row items-center md:items-start justify-between gap-12 px-6 lg:px-5">
-      <div className="flex-1 lg:max-w-[50%] mt-12">
+    <div className="relative flex flex-col lg:flex-row items-center md:items-end lg:items-start justify-between gap-12 px-6 md:px-5">
+      <div className="flex-1 lg:max-w-[50%] mt-12 md:self-start">
         <HeroBranding
           title={"Master ICT Properly"}
           sub={"ICT TUITION — 2025"}
@@ -26,7 +26,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative flex-1 w-full max-w-[400px] lg:max-w-[707px]">
+      <div className="relative flex-1 w-full max-w-[400px] lg:max-w-[707px] md:ml-auto lg:ml-0">
         <div className="absolute -top-4 -right-4 w-32 h-32 rounded-full blur-2xl opacity-60"></div>
         <div className="relative aspect-[3/4] overflow-hidden rounded-[3rem]">
           <Image
