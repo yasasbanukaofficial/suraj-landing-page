@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import NavLink from "../ui/NavLink";
+import GridBg from "./GridBg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +21,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed top-0 w-full z-[100] flex items-center justify-between px-6 md:px-20 py-5 bg-white/70 backdrop-blur-xl border-b border-white/20">
+        <GridBg />
         <Link
           href="/"
           className="relative z-[110] hover:opacity-80 transition-opacity"
