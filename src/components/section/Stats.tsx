@@ -9,11 +9,13 @@ export default function Stats() {
     { label: "Districts", value: "15+", icon: Award },
   ];
   return (
-    <section className="mb-32 border-t border-zinc-100">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        {stats.map((stat, i) => (
-          <StatItem key={i} {...stat} />
-        ))}
+    <section className="px-6 md:px-12 lg:px-20 mt-16 mb-20">
+      <div className="border-t border-zinc-100">
+        <div className="grid grid-cols-2 lg:grid-cols-4">
+          {stats.map((stat, i) => (
+            <StatItem key={i} {...stat} />
+          ))}
+        </div>
       </div>
     </section>
   );
