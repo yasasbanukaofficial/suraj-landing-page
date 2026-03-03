@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import NavLink from "../ui/NavLink";
-import GridBg from "./GridBg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const navItems = ["About", "Classes", "Contact"];
+  const [scrolled, setScrolled] = useState(false);
+  const navItems = ["About", "Courses", "Results", "Contact"];
 
   useEffect(() => {
     if (isOpen) {
@@ -18,17 +18,28 @@ export default function Navbar() {
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      <nav className="fixed top-0 w-full z-[100] flex items-center justify-between px-6 md:px-20 py-5 bg-white/70 backdrop-blur-xl border-b border-white/20">
-        <GridBg />
+      <nav
+        className={`fixed top-0 w-full z-100 flex items-center justify-between px-6 md:px-20 py-5 transition-all duration-300 ${
+          scrolled
+            ? "bg-white/80 backdrop-blur-xl border-b border-zinc-100 shadow-sm"
+            : "bg-white/70 backdrop-blur-xl border-b border-white/20"
+        }`}
+      >
         <Link
           href="/"
-          className="relative z-[110] hover:opacity-80 transition-opacity"
+          className="relative z-110 hover:opacity-80 transition-opacity"
         >
           <Image
             src="/assets/logo.png"
-            alt="logo"
+            alt="Suraj S Kumara ICT"
             width={60}
             height={40}
             priority
@@ -48,7 +59,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="relative z-[110] md:hidden p-2 bg-black text-white rounded-md transition-transform active:scale-90"
+          className="relative z-110 md:hidden p-2 bg-black text-white rounded-md transition-transform active:scale-90"
         >
           {isOpen ? (
             <X size={20} strokeWidth={2.5} />
@@ -59,8 +70,8 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`fixed inset-0 z-[90] bg-white/95 backdrop-blur-2xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden ${
-          isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full"
+        className={`fixed inset-0 z-90 bg-white/95 backdrop-blur-2xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden ${
+          isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
         }`}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8">
@@ -86,13 +97,9 @@ export default function Navbar() {
             }`}
           >
             <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">
-              Follow Our Journey
+              Get in Touch
             </p>
-            <div className="flex justify-center gap-6 mt-4 text-gray-600">
-              <span className="text-xs">IG</span>
-              <span className="text-xs">FB</span>
-              <span className="text-xs">TW</span>
-            </div>
+            <p className="text-sm text-gray-500 mt-3">0742 966 266</p>
           </div>
         </div>
       </div>
