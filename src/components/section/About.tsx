@@ -22,7 +22,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="px-6 md:px-12 lg:px-20 py-20 lg:py-32">
+    <section id="about" className="px-6 md:px-12 lg:px-20 pb-10 lg:pb-16 pt-10 lg:pt-20">
       <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-center">
         <div className="relative w-full max-w-100 lg:max-w-112.5 shrink-0">
           <div className="relative aspect-4/5 rounded-2xl lg:rounded-3xl overflow-hidden">

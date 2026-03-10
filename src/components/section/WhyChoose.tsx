@@ -43,7 +43,7 @@ export default function WhyChoose() {
   ];
 
   return (
-    <section id="results" className="px-6 md:px-12 lg:px-20 py-20 lg:py-32">
+    <section id="why" className="px-6 md:px-12 lg:px-20 py-20 lg:py-32">
       <SectionHeading
         label="Why Students Choose Us"
         title="Built for Results"

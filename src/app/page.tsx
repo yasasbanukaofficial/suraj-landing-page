@@ -1,8 +1,8 @@
 import Navbar from "@/components/layout/Navbar";
 import GridBg from "@/components/layout/GridBg";
 import Hero from "@/components/section/Hero";
-import Stats from "@/components/section/Stats";
 import About from "@/components/section/About";
+import Results from "@/components/section/Results";
 import Courses from "@/components/section/Courses";
 import WhyChoose from "@/components/section/WhyChoose";
 import Testimonials from "@/components/section/Testimonials";
@@ -16,8 +16,8 @@ export default function Home() {
       <GridBg />
       <main className="flex flex-col pt-32">
         <Hero />
-        <Stats />
         <About />
+        <Results />
         <Courses />
         <WhyChoose />
         <Testimonials />
